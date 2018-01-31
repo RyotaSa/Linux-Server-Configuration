@@ -5,7 +5,7 @@
 This project is to aim to deploy a flask application on AWS LightSail and shows steps from creating your instance to your application in Ubuntu.
 The application under instructions is from [github](https://github.com/RyotaSa/Item-Catalog)
 
-IP Address: 13.231.15.252
+IP Address: 52.193.200.99
 Port: 
 
 ## Instruction
@@ -27,7 +27,8 @@ My pem file is LightsailDefaultPrivateKey-ap-northeast-1.pem
 2. Open Git Bush on pem file location
 3. Log in to the server by SSH:  
 ` ssh user@PublicIP -i pemfile name `  
-For instance ` ssh ubuntu@13.231.15.252 -i LightsailDefaultPrivateKey-ap-northeast-1.pem `
+For instance ` ssh ubuntu@52.193.200.99 -i LightsailDefaultPrivateKey-ap-northeast-1.pem `  
+we change port after that.  
 
 **Updating your server**
 Once you connect using SSH, you can see ubuntu black screen server.  
@@ -45,6 +46,7 @@ pop up password prompt and you can type any password
 In privilege section, you can find root user has all the privilege.  
 So, you should add  `grader  ALL=(ALL:ALL) ALL`  
 
+**SSH login using key**  
 
 
 
