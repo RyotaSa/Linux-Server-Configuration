@@ -146,6 +146,11 @@ Flask: `sudo pip install Flask`
 1. Add javascript_origins section: `http://13.115.1.96`,`http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com`  
 2. Add redirect_uris section: `http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/catalog","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/login","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/gconnect","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/gdisconnect`  
 
+**Restart Apache**  
+`sudo service apache2 restart`  
+
+Visit site at <http://13.115.1.96/>
+
 **Bibiliography**  
 https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.html  
 http://wsgi.readthedocs.io/en/latest/  
