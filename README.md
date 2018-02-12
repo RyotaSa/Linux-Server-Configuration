@@ -158,6 +158,6 @@ https://confluence.atlassian.com/bitbucketserver/creating-ssh-keys-776639788.htm
 http://wsgi.readthedocs.io/en/latest/  
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps  
 https://help.ubuntu.com/community/PostgreSQL  
-[Steven Wooding](https://github.com/SteveWooding/fullstack-nanodegree-linux-server-config)
+[Steven Wooding](https://github.com/SteveWooding/fullstack-nanodegree-linux-server-config)  
 [harushimo](https://github.com/harushimo/linux-server-configuration)
 
