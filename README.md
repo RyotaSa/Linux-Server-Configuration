@@ -81,7 +81,8 @@ Clone your app project on this directory: `sudo git clone https://github.com/~ F
 
 **Set up WSGI file**  
 On the FlaskApp directory, create flaskapp.wsgi file.  
-`#!/usr/bin/python
+```
+#!/usr/bin/python
 import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
@@ -89,7 +90,7 @@ sys.path.insert(0, "/var/www/FlaskApp/")
 
 from FlaskApp import app as application
 application.secret_key = 'secret_key'
-`
+```
 
 **Installing a Virtual Env, Git and Flask etc**  
 1. Installing virtualenv: `sudo apt-get install python-pip` `sudo pip install virtualenv`  
@@ -106,8 +107,9 @@ Flask: `sudo pip install Flask`
 
 **Enable a new Virtual host**  
 1. Create the FlaskApp.conf on `/etc/apache2/sites-available/`  
-2. Write:  
-`  <VirtualHost *:80>
+2. Write: 　
+```
+<VirtualHost *:80>
       ServerName 13.115.1.96
       ServerAdmin benz.slr.mclaren@gmail.com
       WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
@@ -124,7 +126,8 @@ Flask: `sudo pip install Flask`
       LogLevel warn
       CustomLog ${APACHE_LOG_DIR}/access.log combined
   </VirtualHost>
-`
+  ```
+  
 3. Restart the apache service: `service apache2 restart`  
 4. Enable new virtual host:`sudo a2ensite FlaskApp`  
 
@@ -142,10 +145,11 @@ Flask: `sudo pip install Flask`
 `CLIENT_ID = json.loads(open('/var/www/FlaskApp/FlaskApp/client_secret.json', 'r').read())['web']['client_id']`  
 `app_id = json.loads(open('/var/www/FlaskApp/FlaskApp/fb_client_secrets.json', 'r').read())['web']['app_id']`  
 
-**Edit the json file**  
+**Edit the json file and OAuth login**  
 1. Add javascript_origins section: `http://13.115.1.96`,`http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com`  
 2. Add redirect_uris section: `http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/catalog","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/login","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/gconnect","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/gdisconnect`  
-
+3. In Facebook App client OAuth Settings, you should add Valid OAuth redirect URIs.
+4. 
 **Restart Apache**  
 `sudo service apache2 restart`  
 
