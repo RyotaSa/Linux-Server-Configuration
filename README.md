@@ -5,7 +5,8 @@
 This project is to aim to deploy a flask application on AWS LightSail and shows steps from creating your instance to your application in Ubuntu.
 The application under instructions is from [github](https://github.com/RyotaSa/Item-Catalog)
 
-IP Address: 13.115.1.96
+IP Address: 13.115.1.96  
+SSH port: 2200  
 URL: http://13.115.1.96/  
 ## Instruction  
 **Prerequisite**  
