@@ -146,10 +146,8 @@ Flask: `sudo pip install Flask`
 `app_id = json.loads(open('/var/www/FlaskApp/FlaskApp/fb_client_secrets.json', 'r').read())['web']['app_id']`  
 
 **Edit the json file and OAuth login**  
-1. Add javascript_origins section: `http://13.115.1.96`,`http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com`  
-2. Add redirect_uris section: `http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/catalog","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/login","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/gconnect","http://ec2-13-115-1-96.ap-northeast-1.compute.amazonaws.com/gdisconnect`  
-3. In Facebook App client OAuth Settings, you should add Valid OAuth redirect URIs.
-4. 
+1. In Facebook App client OAuth Settings, you should add `http://13.115.1.96/`, `` Valid OAuth redirect URIs.
+2. 
 **Restart Apache**  
 `sudo service apache2 restart`  
 
